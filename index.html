@@ -1,0 +1,1702 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Каталог планировок</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Wix+Madefor+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:header */
+.site-header {
+    background-color: var(--color-white);
+    padding: 2px 0;
+    position: relative;
+    z-index: 10;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1476px;
+    margin: 0 auto;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 11px 0;
+  }
+
+  .logo img {
+    width: 199px;
+    height: 54px;
+  }
+
+  .search-form {
+    position: relative;
+    width: 480px;
+  }
+
+  .search-form input {
+    width: 100%;
+    height: 54px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: inset 0px 0px 7px 1px rgba(0, 0, 0, 0.1);
+    padding: 0 60px 0 25px;
+    font-family: var(--font-family-display);
+    font-size: 24px;
+    opacity: 0.65;
+    box-sizing: border-box;
+  }
+
+  .search-form button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .search-form button img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+  }
+
+  .search-suggestion-item {
+    padding: 12px 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: var(--font-family-display);
+    font-size: 18px;
+    color: var(--color-text-dark);
+  }
+
+  .search-suggestion-item:hover,
+  .search-suggestion-item.highlighted {
+    background-color: rgba(240, 152, 25, 0.1);
+  }
+
+  .search-suggestion-item:last-child {
+    border-bottom: none;
+  }
+
+  .search-suggestion-type {
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 2px;
+  }
+
+  .search-suggestion-desc {
+    font-size: 14px;
+    color: var(--color-text-light);
+    font-family: var(--font-family-main);
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .add-btn {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-btn-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .add-btn span {
+    position: relative;
+    font-family: var(--font-family-main);
+    font-weight: 300;
+    font-size: 70px;
+    line-height: 1;
+    color: var(--color-text-black);
+    margin-top: -13px;
+    transition: all 0.3s ease;
+  }
+
+  .add-btn:hover span {
+    transform: scale(1.1);
+    color: var(--color-primary);
+  }
+
+  .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(49deg, rgba(240, 152, 25, 0.8) 0%, rgba(237, 222, 93, 0.53) 134.65%);
+    border-radius: 22px;
+    padding: 3px 4px;
+  }
+
+  .icon-btn img {
+    width: 53px;
+    height: 53px;
+  }
+
+  .login-btn {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    background-color: var(--color-white);
+    border-radius: 22px;
+    padding: 12px 7px;
+    font-family: var(--font-family-main);
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  .login-icon-wrapper {
+    position: relative;
+    width: 28.65px;
+    height: 28.65px;
+  }
+
+  .login-icon-wrapper img {
+    position: absolute;
+  }
+
+  .login-icon-wrapper img:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+
+  .login-icon-wrapper img:nth-child(2) {
+    top: 5.05px;
+    left: 8.59px;
+  }
+
+  .main-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .main-nav a {
+    font-family: var(--font-family-display);
+    font-size: 32px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+  }
+
+  .main-nav a:hover {
+    transform: scale(1.05);
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 1200px) {
+    .search-form {
+      display: none;
+    }
+    .main-nav ul {
+      gap: 30px;
+    }
+    .main-nav a {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header-top {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .header-actions {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+    }
+    .main-nav {
+      display: none; /* Replace with hamburger menu */
+    }
+  }
+
+/* CSS for section section:hero */
+.hero-section {
+    position: relative;
+    height: 777px;
+    margin-top: -131px;
+    padding-top: 131px;
+    background: linear-gradient(180deg, #ffffff 0%, rgba(234, 234, 234, 0.17) 100%);
+    overflow: hidden;
+  }
+
+  .hero-section .page-wrapper {
+    height: 100%;
+    position: relative;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: -74px;
+    width: 1047px;
+    height: 100%;
+  }
+
+  .hero-pattern {
+    top: 22px;
+    left: 3px;
+    width: 1488px;
+    height: 478px;
+  }
+
+  .hero-image-group {
+    position: absolute;
+    top: 0;
+    left: 74px;
+    width: 1047px;
+    height: 777px;
+  }
+
+  .hero-image-group img {
+    position: absolute;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hero-img-exterior {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hero-img-exterior:hover {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+  }
+
+  .hero-img-plan {
+    top: 32px;
+    left: 69px;
+    width: 929.5px;
+    height: 429.5px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hero-img-plan:hover {
+    transform: scale(1.12);
+    filter: brightness(1.05) contrast(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .hero-text {
+    position: relative;
+    text-align: center;
+    width: 300px;
+    margin-right: 39px;
+    margin-top: -140px;
+  }
+
+  .hero-dots {
+    position: absolute;
+    top: -20px;
+    left: -193px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-text h1 {
+    font-family: var(--font-family-main);
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--color-text-dark);
+    margin: 0 0 11px;
+  }
+
+  .hero-text p {
+    font-family: var(--font-family-main);
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--color-text-light);
+    margin: 0;
+  }
+
+  @media (max-width: 1200px) {
+    .hero-text {
+      margin-right: 20px;
+    }
+    .hero-background {
+      left: -150px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .hero-section {
+      height: auto;
+      padding: 150px 20px 50px;
+      text-align: center;
+    }
+    .hero-background {
+      opacity: 0.3;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .hero-content {
+      justify-content: center;
+    }
+    .hero-text {
+      margin: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .hero-dots {
+      display: none;
+    }
+  }
+
+/* CSS for section section:features */
+.features-section {
+    padding: 88px 0;
+  }
+
+  .features-section .page-wrapper {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .section-title {
+    font-family: var(--font-family-display);
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 4.8px;
+    margin: 0 0 67px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 88px;
+  }
+
+  .feature-card {
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.17);
+    position: relative;
+    height: 670px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-image-wrapper {
+    height: 495px;
+    overflow: hidden;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    padding: 23px 17px;
+    height: 267px;
+    box-sizing: border-box;
+  }
+
+  .card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .card-action-btn {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-family: var(--font-family-main);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .add-to-cart-btn {
+    background: linear-gradient(135deg, rgba(240, 152, 25, 0.9) 0%, rgba(237, 222, 93, 0.9) 100%);
+    color: var(--color-text-dark);
+  }
+
+  .add-to-cart-btn:hover {
+    background: linear-gradient(135deg, rgba(240, 152, 25, 1) 0%, rgba(237, 222, 93, 1) 100%);
+    transform: translateY(-2px);
+  }
+
+  .add-to-favorites-btn {
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.9) 0%, rgba(255, 99, 71, 0.9) 100%);
+    color: white;
+  }
+
+  .add-to-favorites-btn:hover {
+    background: linear-gradient(135deg, rgba(255, 69, 0, 1) 0%, rgba(255, 99, 71, 1) 100%);
+    transform: translateY(-2px);
+  }
+
+  .card-header {
+    margin-bottom: 20px;
+  }
+
+  .card-header h3 {
+    font-family: var(--font-family-main);
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--color-text-dark);
+    margin: 0;
+  }
+
+  .card-area {
+    font-family: var(--font-family-main);
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--color-primary);
+    margin: 6px 0 0;
+  }
+
+  .card-desc {
+    font-family: var(--font-family-main);
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 6px 0 0;
+  }
+
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+  }
+
+  .tag {
+    background-color: var(--color-background-light);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: var(--font-family-main);
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--color-text-light);
+  }
+
+  .card-arrow {
+    position: absolute;
+    top: -108px;
+    right: 17px;
+    width: 48px;
+    height: 48px;
+  }
+
+  @media (max-width: 1400px) {
+    .features-grid {
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+    .feature-card {
+      height: auto;
+    }
+    .card-content {
+      position: static;
+      height: auto;
+    }
+    .card-arrow {
+      display: none;
+    }
+  }
+
+  /* Hover animations for Khrushchevka card */
+  .feature-card:first-child {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:first-child:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, rgba(240, 152, 25, 0.1) 0%, rgba(237, 222, 93, 0.1) 100%);
+  }
+
+  .feature-card:first-child:hover .card-image {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:first-child .card-image {
+    transition: transform 0.3s ease;
+  }
+
+  /* Hover animations for Stalinka card (second card) */
+  .feature-card:nth-child(2) {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:nth-child(2):hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(205, 133, 63, 0.1) 100%);
+  }
+
+  .feature-card:nth-child(2):hover .card-image {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:nth-child(2) .card-image {
+    transition: transform 0.3s ease;
+  }
+
+  /* Hover animations for Brezhnevka card (third card) */
+  .feature-card:nth-child(3) {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:nth-child(3):hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.1) 0%, rgba(135, 206, 235, 0.1) 100%);
+  }
+
+  .feature-card:nth-child(3):hover .card-image {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:nth-child(3) .card-image {
+    transition: transform 0.3s ease;
+  }
+
+  /* Hover animations for Panelka card (fourth card) */
+  .feature-card:nth-child(4) {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:nth-child(4):hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, rgba(128, 128, 128, 0.1) 0%, rgba(169, 169, 169, 0.1) 100%);
+  }
+
+  .feature-card:nth-child(4):hover .card-image {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:nth-child(4) .card-image {
+    transition: transform 0.3s ease;
+  }
+
+  /* Hover animations for Novostroyka card (fifth card) */
+  .feature-card:nth-child(5) {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:nth-child(5):hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, rgba(34, 139, 34, 0.1) 0%, rgba(144, 238, 144, 0.1) 100%);
+  }
+
+  .feature-card:nth-child(5):hover .card-image {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:nth-child(5) .card-image {
+    transition: transform 0.3s ease;
+  }
+
+  /* Hover animations for Custom apartment card (sixth card) */
+  .feature-card:nth-child(6) {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:nth-child(6):hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(221, 160, 221, 0.1) 100%);
+  }
+
+  .feature-card:nth-child(6):hover .card-image {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:nth-child(6) .card-image {
+    transition: transform 0.3s ease;
+  }
+
+
+  .floor-plan-container {
+    position: relative;
+    top: 32px;
+    left: 69px;
+    width: 929.5px;
+    height: 429.5px;
+    display: inline-block;
+  }
+
+  .floor-plan-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .floor-plan-menu.show {
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .floor-plan-menu.hide {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  .plan-menu-btn {
+    background: linear-gradient(135deg, rgba(240, 152, 25, 0.9) 0%, rgba(237, 222, 93, 0.9) 100%);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-family: var(--font-family-main);
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .plan-menu-btn:hover {
+    background: linear-gradient(135deg, rgba(240, 152, 25, 1) 0%, rgba(237, 222, 93, 1) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 15px rgba(240, 152, 25, 0.4);
+  }
+
+  .plan-menu-btn:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .floor-plan-menu {
+      min-width: 200px;
+      padding: 15px;
+    }
+    
+    .plan-menu-btn {
+      font-size: 16px;
+      padding: 12px 15px;
+    }
+  }
+
+  /* Modal styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .modal-overlay.show {
+    display: flex;
+    opacity: 1;
+  }
+
+  .modal-content {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.3);
+  }
+
+  .modal-overlay.show .modal-content {
+    transform: scale(1);
+  }
+
+  .modal-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--color-background-light);
+    padding-bottom: 20px;
+  }
+
+  .modal-header h2 {
+    font-family: var(--font-family-main);
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--color-text-dark);
+    margin: 0 0 10px;
+  }
+
+  .modal-header p {
+    font-family: var(--font-family-main);
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--color-text-light);
+    margin: 0;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--color-text-light);
+    transition: color 0.3s ease, transform 0.2s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-close:hover {
+    color: var(--color-text-dark);
+    transform: scale(1.1);
+  }
+
+  .apartment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .apartment-option {
+    background: linear-gradient(135deg, rgba(240, 152, 25, 0.1) 0%, rgba(237, 222, 93, 0.1) 100%);
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .apartment-option:hover {
+    border-color: rgba(240, 152, 25, 0.5);
+    background: linear-gradient(135deg, rgba(240, 152, 25, 0.2) 0%, rgba(237, 222, 93, 0.2) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 25px rgba(240, 152, 25, 0.2);
+  }
+
+  /* Cart, Favorites, Login modal styles */
+  .cart-content, .favorites-content, .login-content {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .cart-content p, .favorites-content p {
+    margin: 10px 0;
+    color: var(--color-text-light);
+  }
+
+  .login-form {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--color-text-dark);
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--color-background-light);
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+
+  .login-submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, rgba(240, 152, 25, 0.9) 0%, rgba(237, 222, 93, 0.9) 100%);
+    border: none;
+    border-radius: 8px;
+    color: var(--color-text-dark);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .login-submit-btn:hover {
+    background: linear-gradient(135deg, rgba(240, 152, 25, 1) 0%, rgba(237, 222, 93, 1) 100%);
+    transform: translateY(-2px);
+  }
+
+  .register-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--color-text-light);
+  }
+
+  .register-link a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+
+  /* Cart and Favorites items styles */
+  .cart-items, .favorites-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cart-item, .favorites-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: rgba(240, 152, 25, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(240, 152, 25, 0.2);
+  }
+
+  .item-info h4 {
+    margin: 0 0 5px;
+    font-family: var(--font-family-main);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-text-dark);
+  }
+
+  .item-info p {
+    margin: 0 0 5px;
+    font-family: var(--font-family-main);
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--color-text-light);
+  }
+
+  .item-info small {
+    font-size: 12px;
+    color: var(--color-text-light);
+  }
+
+  .remove-btn {
+    padding: 8px 15px;
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.9) 0%, rgba(255, 99, 71, 0.9) 100%);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-family: var(--font-family-main);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .remove-btn:hover {
+    background: linear-gradient(135deg, rgba(255, 69, 0, 1) 0%, rgba(255, 99, 71, 1) 100%);
+    transform: translateY(-2px);
+  }
+
+  .apartment-option h3 {
+    font-family: var(--font-family-main);
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--color-text-dark);
+    margin: 0 0 10px;
+  }
+
+  .apartment-option p {
+    font-family: var(--font-family-main);
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--color-text-light);
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .modal-content {
+      padding: 30px 20px;
+      margin: 20px;
+    }
+    
+    .modal-header h2 {
+      font-size: 28px;
+    }
+    
+    .apartment-option h3 {
+      font-size: 24px;
+    }
+    
+    .apartment-option p {
+      font-size: 16px;
+    }
+  }
+
+/* CSS for section section:info */
+.info-section {
+    position: relative;
+    padding: 89px 0;
+    overflow: hidden;
+  }
+
+  .info-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 52px;
+  }
+
+  .info-text-content {
+    flex: 1;
+    max-width: 448px;
+  }
+
+  .info-text-content p {
+    font-size: 32px;
+    line-height: 1.18;
+    margin: 0 0 38px;
+  }
+
+  .text-bold {
+    font-weight: 700;
+  }
+
+  .text-medium {
+    font-weight: 500;
+  }
+
+  .text-light {
+    font-weight: 300;
+  }
+
+  .info-image-content {
+    flex-shrink: 0;
+    width: 1047px;
+    height: 777px;
+    transform: rotate(180deg);
+  }
+
+  .info-background-patterns {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .info-background-patterns .background-pattern {
+    position: absolute;
+    width: 1488px;
+    height: 478px;
+  }
+
+  .pattern-1 {
+    top: -45px;
+    left: 4px;
+  }
+
+  .pattern-2 {
+    bottom: -45px;
+    left: 0;
+  }
+
+  @media (max-width: 1400px) {
+    .info-image-content {
+      width: 60%;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .info-container {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+    .info-text-content {
+      max-width: 100%;
+      order: 2;
+    }
+    .info-image-content {
+      order: 1;
+      width: 100%;
+      transform: none;
+    }
+  }
+
+/* CSS for section section:footer */
+.site-footer {
+    background: linear-gradient(90deg, rgba(240, 152, 25, 0.31) 0%, rgba(237, 218, 89, 0.31) 100%);
+    padding: 24px 0;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 99px;
+  }
+
+  .footer-contact p,
+  .footer-social p,
+  .footer-social li {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .footer-contact p strong,
+  .footer-social p strong {
+    font-family: var(--font-family-display);
+    font-weight: 700;
+  }
+
+  .footer-contact p {
+    font-family: var(--font-family-display);
+    font-weight: 400;
+  }
+
+  .footer-center {
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 199px;
+    height: 54px;
+    margin: 0 auto 15px;
+  }
+
+  .copyright {
+    font-family: var(--font-family-display);
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .footer-social {
+    text-align: right;
+  }
+
+  .footer-social ul {
+    margin-top: 15px;
+  }
+
+  .footer-social li {
+    font-family: var(--font-family-display);
+    font-weight: 400;
+  }
+
+  @media (max-width: 992px) {
+    .footer-container {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+    }
+    .footer-social, .footer-contact {
+      text-align: center;
+    }
+  }
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<header id="section-header" class="site-header">
+  <div class="header-container">
+    <div class="header-top">
+      <a href="#" class="logo">
+        <img src="images/b0b3947fd436bcd8fd93ad3b1b8bbe672c155355.png" alt="ruyut logo">
+      </a>
+      <form class="search-form">
+        <input type="search" placeholder="искать..." id="search-input">
+        <button type="submit">
+          <img src="images/I314_322_145_837.svg" alt="Search">
+        </button>
+        <div class="search-suggestions" id="search-suggestions"></div>
+      </form>
+      <div class="header-actions">
+        <a href="#" class="add-btn">
+          <img src="images/I314_322_145_851.svg" alt="Add" class="add-btn-bg">
+          <span>+</span>
+        </a>
+        <div class="user-actions">
+          <a href="#" class="icon-btn">
+            <img src="images/I314_322_145_840.svg" alt="Cart">
+          </a>
+          <a href="#" class="icon-btn">
+            <img src="images/I314_322_145_843.svg" alt="Favorites">
+          </a>
+          <a href="#" class="login-btn">
+            <span>login</span>
+            <!--merged image-->
+            <div class="login-icon-wrapper">
+              <img src="images/I314_322_145_848.svg" alt="Login icon part 1">
+              <img src="images/I314_322_145_849.svg" alt="Login icon part 2">
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">главная</a></li>
+        <li><a href="#">планировки</a></li>
+        <li><a href="#">конструктор</a></li>
+        <li><a href="#">лента</a></li>
+        <li><a href="#">калькулятор</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section id="section-hero" class="hero-section">
+  <div class="page-wrapper">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-dots">
+       
+        </div>
+        <h1>Каталог планировок</h1>
+        <p>Готовые решения для разных типовых решений квартир для вашего стиля жизни</p>
+      </div>
+    </div>
+    <div class="hero-background">
+      <img src="images/314_831.svg" alt="Background pattern" class="background-pattern hero-pattern">
+      <!--merged image-->
+      <div class="hero-image-group">
+        <img src="images/93b7ee128fa036ce19da9803b3c1503a136cdb16.png" alt="Building exterior" class="hero-img-exterior">
+        <div class="floor-plan-container">
+          <img src="images/88_28.svg" alt="Building floor plan" class="hero-img-plan" id="floor-plan-image">
+          <div class="floor-plan-menu" id="floor-plan-menu">
+            <button class="plan-menu-btn" id="plan-home-btn" data-plan-type="house">План дома</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-features" class="features-section">
+  <div class="page-wrapper">
+    <h2 class="section-title">Выберите свой тип квартиры</h2>
+    <div class="features-grid">
+      <article class="feature-card">
+        <div class="card-image-wrapper">
+          <img src="images/d5f2f2be25e36fdac1b2a2e1b5a304abccbbb311.png" alt="Хрущевка" class="card-image">
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Хрущевка</h3>
+            <p class="card-area">30-45 м²</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">компактность</span>
+            <span class="tag">типовой</span>
+            <span class="tag">функциональность</span>
+          </div>
+          <div class="card-actions">
+            <button class="card-action-btn add-to-cart-btn" data-apartment-type="khrushchevka" data-rooms="1">В корзину</button>
+            <button class="card-action-btn add-to-favorites-btn" data-apartment-type="khrushchevka" data-rooms="1">В избранное</button>
+          </div>
+          <a href="#" class="card-arrow"><img src="images/101_63.svg" alt="Arrow"></a>
+        </div>
+      </article>
+      <article class="feature-card">
+        <div class="card-image-wrapper">
+          <img src="images/9f8c178358fa3598f8d82df2b61b4888602540b0.png" alt="Сталинка" class="card-image">
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Сталинка</h3>
+            <p class="card-area">45-100 м²</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">классический</span>
+            <span class="tag">потолки</span>
+            <span class="tag">функциональность</span>
+          </div>
+          <div class="card-actions">
+            <button class="card-action-btn add-to-cart-btn" data-apartment-type="stalinka" data-rooms="1">В корзину</button>
+            <button class="card-action-btn add-to-favorites-btn" data-apartment-type="stalinka" data-rooms="1">В избранное</button>
+          </div>
+          <a href="#" class="card-arrow"><img src="images/101_47.svg" alt="Arrow"></a>
+        </div>
+      </article>
+      <article class="feature-card">
+        <div class="card-image-wrapper">
+          <img src="images/ddb9a55da369eda6bdcb1bf12e1a233a666ded69.png" alt="Брежневка" class="card-image">
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Брежневка</h3>
+            <p class="card-area">45-70 м²</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">большие пространства</span>
+            <span class="tag">комфортность</span>
+            <span class="tag">типовой</span>
+          </div>
+          <div class="card-actions">
+            <button class="card-action-btn add-to-cart-btn" data-apartment-type="brezhnevka" data-rooms="1">В корзину</button>
+            <button class="card-action-btn add-to-favorites-btn" data-apartment-type="brezhnevka" data-rooms="1">В избранное</button>
+          </div>
+          <a href="#" class="card-arrow"><img src="images/64_594.svg" alt="Arrow"></a>
+        </div>
+      </article>
+      <article class="feature-card">
+        <div class="card-image-wrapper">
+          <img src="images/eb8169a2629a3207ad063f95d2253dfc042f861c.png" alt="Панелька" class="card-image">
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Панелька</h3>
+            <p class="card-area">40-65 м²</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">компактность</span>
+            <span class="tag">типовой</span>
+            <span class="tag">современность</span>
+          </div>
+          <div class="card-actions">
+            <button class="card-action-btn add-to-cart-btn" data-apartment-type="panelka" data-rooms="1">В корзину</button>
+            <button class="card-action-btn add-to-favorites-btn" data-apartment-type="panelka" data-rooms="1">В избранное</button>
+          </div>
+        </div>
+      </article>
+      <article class="feature-card">
+        <div class="card-image-wrapper">
+          <img src="images/dc6b960059a3bdd9ab339ba9208ff36fc0952cc1.png" alt="Новостройка" class="card-image">
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Новостройка</h3>
+            <p class="card-area">40-100 м²</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">большие окна</span>
+            <span class="tag">удобство</span>
+            <span class="tag">современность</span>
+          </div>
+          <div class="card-actions">
+            <button class="card-action-btn add-to-cart-btn" data-apartment-type="novostroyka" data-rooms="1">В корзину</button>
+            <button class="card-action-btn add-to-favorites-btn" data-apartment-type="novostroyka" data-rooms="1">В избранное</button>
+          </div>
+          <a href="#" class="card-arrow"><img src="images/101_129.svg" alt="Arrow"></a>
+        </div>
+      </article>
+      <article class="feature-card">
+        <div class="card-image-wrapper">
+          <img src="images/f4b4f79e5fa14c7da0902046d4faf428d4a6a425.png" alt="Своя квартира" class="card-image">
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Своя квартира</h3>
+            <p class="card-desc">Создай свою планировку в редакторе Руют</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">комфортность</span>
+            <span class="tag">свобода</span>
+            <span class="tag">индивидуальность</span>
+          </div>
+          <div class="card-actions">
+            <button class="card-action-btn add-to-cart-btn" data-apartment-type="custom" data-rooms="1">В корзину</button>
+            <button class="card-action-btn add-to-favorites-btn" data-apartment-type="custom" data-rooms="1">В избранное</button>
+          </div>
+          <a href="#" class="card-arrow"><img src="images/101_96.svg" alt="Arrow"></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="section-info" class="info-section">
+  <div class="page-wrapper info-container">
+    <div class="info-text-content">
+      <p>
+        <span class="text-bold">Квартира - куда больше чем, стены </span>
+        <span class="text-medium">Типовая планировка - самый распространенный тип планировок в странах постсоветского простаранства</span>
+      </p>
+      <p><span class="text-light">Руют - ваш личный помощник в поиске, подсказке и находке своего "того самого" дизайна </span></p>
+      <p><span class="text-medium">Мы создаем для вас нетиповые дизайны, в типовых условиях</span></p>
+      <p><span class="text-bold">Уют начинается здесь - Руют</span></p>
+    </div>
+    <div class="info-image-content">
+      <img src="images/93b7ee128fa036ce19da9803b3c1503a136cdb16.png" alt="Floor plan illustration">
+    </div>
+  </div>
+  <!--merged image-->
+  <div class="info-background-patterns">
+    <img src="images/314_679.svg" alt="Background pattern" class="background-pattern pattern-1">
+    <img src="images/314_527.svg" alt="Background pattern" class="background-pattern pattern-2">
+  </div>
+</section>
+<footer id="section-footer" class="site-footer">
+  <div class="page-wrapper footer-container">
+    <div class="footer-contact">
+      <p><strong>Телефон:</strong><br>+7(777)777-77-77</p>
+      <p><strong>Электронная почта:</strong><br>ruyut@home.ru</p>
+    </div>
+    <div class="footer-center">
+      <img src="images/b0b3947fd436bcd8fd93ad3b1b8bbe672c155355.png" alt="ruyut logo" class="footer-logo">
+      <p class="copyright">все права защищены © 2025<br>ruyut.ru</p>
+    </div>
+    <div class="footer-social">
+      <p><strong>Соц. сети:</strong></p>
+      <ul>
+        <li>youtube</li>
+        <li>telegram</li>
+        <li>vk</li>
+        <li>instagram</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal for Khrushchevka apartment options -->
+<div id="khrushchevka-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <div class="modal-header">
+      <h2>Хрущевка</h2>
+      <p>Выберите количество комнат для вашей планировки</p>
+    </div>
+    <div class="apartment-options">
+      <div class="apartment-option" data-rooms="1">
+        <h3>1-комнатная квартира</h3>
+        <p>Компактное решение для одного человека или молодой пары</p>
+      </div>
+      <div class="apartment-option" data-rooms="2">
+        <h3>2-комнатная квартира</h3>
+        <p>Оптимальный вариант для небольшой семьи</p>
+      </div>
+      <div class="apartment-option" data-rooms="3">
+        <h3>3-комнатная квартира</h3>
+        <p>Просторное жилье для большой семьи</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Stalinka apartment options -->
+<div id="stalinka-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="stalinka-modal-close">&times;</button>
+    <div class="modal-header">
+      <h2>Сталинка</h2>
+      <p>Выберите планировку для классической квартиры с высокими потолками</p>
+    </div>
+    <div class="apartment-options">
+      <div class="apartment-option stalinka-option" data-rooms="1" data-type="stalinka">
+        <h3>1-комнатная сталинка</h3>
+        <p>Просторная комната с высокими потолками и классическими элементами</p>
+      </div>
+      <div class="apartment-option stalinka-option" data-rooms="2" data-type="stalinka">
+        <h3>2-комнатная сталинка</h3>
+        <p>Элегантная планировка с изолированными комнатами и большой кухней</p>
+      </div>
+      <div class="apartment-option stalinka-option" data-rooms="3" data-type="stalinka">
+        <h3>3-комнатная сталинка</h3>
+        <p>Роскошная квартира с просторными комнатами и классической архитектурой</p>
+      </div>
+      <div class="apartment-option stalinka-option" data-rooms="4" data-type="stalinka">
+        <h3>4-комнатная сталинка</h3>
+        <p>Премиальное жилье с множеством комнат и аутентичным дизайном</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Brezhnevka apartment options -->
+<div id="brezhnevka-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="brezhnevka-modal-close">&times;</button>
+    <div class="modal-header">
+      <h2>Брежневка</h2>
+      <p>Выберите планировку для комфортной квартиры с большими пространствами</p>
+    </div>
+    <div class="apartment-options">
+      <div class="apartment-option brezhnevka-option" data-rooms="1" data-type="brezhnevka">
+        <h3>1-комнатная брежневка</h3>
+        <p>Просторная комната с улучшенной планировкой и большими окнами</p>
+      </div>
+      <div class="apartment-option brezhnevka-option" data-rooms="2" data-type="brezhnevka">
+        <h3>2-комнатная брежневка</h3>
+        <p>Комфортная планировка с изолированными комнатами и просторной кухней</p>
+      </div>
+      <div class="apartment-option brezhnevka-option" data-rooms="3" data-type="brezhnevka">
+        <h3>3-комнатная брежневка</h3>
+        <p>Большая квартира с отдельными комнатами и улучшенной функциональностью</p>
+      </div>
+      <div class="apartment-option brezhnevka-option" data-rooms="4" data-type="brezhnevka">
+        <h3>4-комнатная брежневка</h3>
+        <p>Просторное жилье для большой семьи с максимальным комфортом</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Panelka apartment options -->
+<div id="panelka-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="panelka-modal-close">&times;</button>
+    <div class="modal-header">
+      <h2>Панелька</h2>
+      <p>Выберите планировку для современной типовой квартиры</p>
+    </div>
+    <div class="apartment-options">
+      <div class="apartment-option panelka-option" data-rooms="1" data-type="panelka">
+        <h3>1-комнатная панелька</h3>
+        <p>Компактная современная квартира с функциональной планировкой</p>
+      </div>
+      <div class="apartment-option panelka-option" data-rooms="2" data-type="panelka">
+        <h3>2-комнатная панелька</h3>
+        <p>Удобная планировка с раздельными комнатами и современными решениями</p>
+      </div>
+      <div class="apartment-option panelka-option" data-rooms="3" data-type="panelka">
+        <h3>3-комнатная панелька</h3>
+        <p>Просторная квартира с оптимальным использованием пространства</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Novostroyka apartment options -->
+<div id="novostroyka-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="novostroyka-modal-close">&times;</button>
+    <div class="modal-header">
+      <h2>Новостройка</h2>
+      <p>Выберите планировку для современной квартиры с большими окнами</p>
+    </div>
+    <div class="apartment-options">
+      <div class="apartment-option novostroyka-option" data-rooms="1" data-type="novostroyka">
+        <h3>1-комнатная новостройка</h3>
+        <p>Современная студия с панорамными окнами и свободной планировкой</p>
+      </div>
+      <div class="apartment-option novostroyka-option" data-rooms="2" data-type="novostroyka">
+        <h3>2-комнатная новостройка</h3>
+        <p>Комфортная квартира с большими окнами и современными технологиями</p>
+      </div>
+      <div class="apartment-option novostroyka-option" data-rooms="3" data-type="novostroyka">
+        <h3>3-комнатная новостройка</h3>
+        <p>Просторная квартира с панорамным остеклением и премиум отделкой</p>
+      </div>
+      <div class="apartment-option novostroyka-option" data-rooms="4" data-type="novostroyka">
+        <h3>4-комнатная новостройка</h3>
+        <p>Элитное жилье с максимальным комфортом и современным дизайном</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Cart -->
+<div id="cart-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="cart-modal-close">&times;</button>
+    <div class="modal-header">
+      <h2>Корзина</h2>
+      <p>Ваши выбранные планировки</p>
+    </div>
+    <div class="cart-content">
+      <p>Ваша корзина пуста</p>
+      <p>Добавьте планировки для оформления заказа</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Favorites -->
+<div id="favorites-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="favorites-modal-close">&times;</button>
+    <div class="modal-header">
+      <h2>Избранные товары</h2>
+      <p>Ваши сохраненные планировки</p>
+    </div>
+    <div class="favorites-content">
+      <p>У вас нет избранных товаров</p>
+      <p>Добавьте планировки в избранное для быстрого доступа</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Login -->
+<div id="login-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="login-modal-close">&times;</button>
+    <div class="modal-header">
+      <h2>Вход в аккаунт</h2>
+      <p>Войдите для сохранения ваших планировок</p>
+    </div>
+    <div class="login-content">
+      <form class="login-form">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="login-submit-btn">Войти</button>
+      </form>
+      <p class="register-link">Нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Add Design -->
+<div id="add-design-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="add-design-modal-close">&times;</button>
+    <div class="apartment-options">
+      <div class="apartment-option add-design-option" data-action="add-design" tabindex="0" role="button" aria-selected="false">
+        <h3>добавить дизайн</h3>
+        <p>Добавьте новый дизайн планировки в каталог</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Custom apartment options -->
+<div id="custom-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="custom-modal-close">&times;</button>
+    <div class="modal-header">
+      <h2>Своя квартира</h2>
+      <p>Создайте уникальную планировку в редакторе Руют</p>
+    </div>
+    <div class="apartment-options">
+      <div class="apartment-option custom-option" data-rooms="custom" data-type="custom">
+        <h3>Конструктор планировок</h3>
+        <p>Создайте свою уникальную планировку с помощью интерактивного редактора</p>
+      </div>
+      <div class="apartment-option custom-option" data-rooms="template" data-type="custom">
+        <h3>Готовые шаблоны</h3>
+        <p>Выберите из коллекции готовых дизайнерских решений и адаптируйте под себя</p>
+      </div>
+      <div class="apartment-option custom-option" data-rooms="consultation" data-type="custom">
+        <h3>Консультация дизайнера</h3>
+        <p>Получите персональную консультацию от профессионального дизайнера</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
